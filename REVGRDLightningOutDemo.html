@@ -8,7 +8,7 @@
 
 </style>
 
-<script src="https://invisible-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+<script src="https://andriypauk-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
 
 <div data-lightning-out="true"></div>
 
@@ -16,21 +16,29 @@
 
     const appName = 'c:LightingOutApp';
     const componentName = 'c:myAppComponent';
-    const lightningEndpoint = 'https://invisible-dev-ed.my.salesforce.com';
+    const lightningEndpoint = 'https://andriypauk-dev-ed.my.salesforce.com';
     const targetElement = document.querySelector("[data-lightning-out]");
-    const authToken = '{! $Api.Session_ID }';
+    const authToken = '00D0Y000002Iliy!AQYAQNqIqmWF.qqX3mE4u9kwl7oXTBNjy9r3sXQfiKZTPZFxV55AQuXXzbRSOOJG6zRCvbZw3ynC_cXEYtd8BPD77MLc0H0h';
     const componentAttributes = {
 
     };
+    function Test(){
+  
+      console.log('lightning component created222');
+    }
+    Test();
 
     $Lightning.use(
             appName,
             authToken,
+     
             function (){
+      console.log('lightning component created33');
               $Lightning.createComponent(
                       componentName,
                       componentAttributes,
                       targetElement,
+         
                       function (cmp){
                         console.log('lightning component created');
                       }

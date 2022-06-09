@@ -22,13 +22,18 @@
     const componentAttributes = {
 
     };
-    
-    console.log('lightning component created222');
+    function Test(){
+  
+      console.log('lightning component created222');
+    }
+    Test();
 
     $Lightning.use(
             appName,
             authToken,
+     
             function (){
+      console.log('lightning component created33');
               $Lightning.createComponent(
                       componentName,
                       componentAttributes,
